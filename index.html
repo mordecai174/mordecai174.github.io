@@ -5,50 +5,242 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matt Rossi Designs</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@500;700&family=Inter:wght@500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap');
 
   :root {
-    --bg: #0a0a0a;
-    --fg: #ffffff;
+    --bg: #0F0F0F;
+    --fg: #FFFFFF;
+    --muted: #B8B8B8;
+    --gutter: 32px;
+    --margin: 64px;
+    --gap-lg: 96px;
+    --gap-md: 32px;
+    --pad-top: 64px;
+    --pad-bottom: 96px;
+
+    --fs-sm: 24px;
+    --lh-sm: 1.5;
+    --fs-lg: 32px;
+    --lh-lg: 1.5;
+    --fs-xl: 64px;
+    --lh-xl: 1.1875;
+  }
+
+  /* mobile: scale type down by the same 75% factor (ratio between
+     tiers stays identical) and tighten spacing to match */
+  @media (max-width: 720px) {
+    :root {
+      --gutter: 16px;
+      --margin: 24px;
+      --gap-lg: 56px;
+      --gap-md: 24px;
+      --pad-top: 32px;
+      --pad-bottom: 64px;
+
+      --fs-sm: 18px;
+      --fs-lg: 24px;
+      --fs-xl: 36px;
+    }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
   html, body {
-    height: 100%;
     width: 100%;
     background: var(--bg);
-    overflow: hidden;
-    font-family: 'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif;
   }
 
-  .stage {
+  body {
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow-x: hidden;
+    min-height: 100vh;
   }
 
-  h1 {
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  /* fixed decorative background, centered in viewport, stays put while page scrolls */
+  .bg-name {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(1407px, 94vw);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  .bg-name img { display: block; width: 100%; height: auto; }
+
+  main {
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--margin);
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-bottom);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gutter);
+  }
+
+  /* hero row: name/title left, contact links right */
+  .hero {
+    align-items: start;
+  }
+
+  .hero__id { grid-column: 1 / 4; }
+  .hero__links { grid-column: 4 / 7; text-align: left; }
+
+  .hero__id, .hero__links {
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: 400;
     color: var(--fg);
-    font-weight: 700;
-    font-size: clamp(2.5rem, 8vw, 7rem);
-    line-height: 1.05;
-    text-align: center;
-    letter-spacing: -0.01em;
-    max-width: 90vw;
+  }
+
+  .hero__id a {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .hero__id .name {
+    color: #769AFF;
+    font-weight: 500;
+  }
+
+  .hero__links a {
+    display: block;
+    color: var(--fg);
+    text-decoration: underline;
+    font-weight: 400;
+  }
+
+  .intro {
+    margin-top: var(--gap-lg);
+  }
+
+  .intro p {
+    grid-column: 1 / 6;
+    color: var(--fg);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: 400;
+    max-width: 60ch;
+  }
+
+  .intro p.lead {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-xl);
+    max-width: none;
+  }
+
+  .intro p + p {
+    margin-top: var(--gap-md);
+  }
+
+  .split {
+    margin-top: var(--gap-lg);
+  }
+
+  .split__col {
+    grid-column: span 3;
+  }
+
+  .split__col h2 {
+    color: var(--fg);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: 500;
+    margin-bottom: 0.75em;
+  }
+
+  .split__col p {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    font-weight: 400;
+    max-width: 48ch;
+  }
+
+  .status {
+    margin-top: var(--gap-lg);
+  }
+
+  .status p {
+    grid-column: 1 / 6;
+    color: var(--muted);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: 400;
+  }
+
+  @media (max-width: 720px) {
+    .intro p,
+    .status p {
+      grid-column: 1 / 7;
+      max-width: none;
+    }
+    .split__col {
+      grid-column: 1 / 7;
+    }
+    .split__col + .split__col {
+      margin-top: var(--gap-md);
+    }
   }
 </style>
 </head>
 <body>
 
-<div class="stage">
-  <h1>Matt Rossi Designs</h1>
+<div class="bg-name" aria-hidden="true">
+  <img src="assets/bg-name.svg" alt="">
 </div>
+
+<main>
+  <div class="grid hero">
+    <div class="hero__id">
+      <span class="name">Matt Rossi</span><br>
+      Design Director<br>
+      at <a href="https://mojotech.com" target="_blank" rel="noopener">MojoTech</a>
+    </div>
+    <div class="hero__links">
+      <a href="mailto:mattrossidesigns@gmail.com">Email</a>
+      <a href="https://github.com/mordecai174" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://dribbble.com/mattrossidesigns" target="_blank" rel="noopener">Dribbble</a>
+    </div>
+  </div>
+
+  <div class="grid intro">
+    <p class="lead">It all started with a love for design and learning how to bring my ideas to life.</p>
+    <p class="lead">I've been designing and coding for the web since 2001. Currently I lead the Product Design team at MojoTech, in the great state of Rhode Island.</p>
+  </div>
+
+  <div class="grid split">
+    <div class="split__col">
+      <h2>As a designer&hellip;</h2>
+      <p>I care more about the outcome than the process. I'll adapt how I get there if it means a better result. That said, I ask a lot of questions, because good answers usually surface the real problem before we start solving the wrong one. Communication is the skill I've worked hardest to develop over the years, and it shows up in how I brief, critique, and collaborate. I use AI as a tool that speeds up my thinking, not a substitute for it.</p>
+    </div>
+    <div class="split__col">
+      <h2>As a leader&hellip;</h2>
+      <p>Trust comes first. I'd rather build a team around people I trust than manage around people I don't. I look for a "doer" mentality: people who'd rather show you something than explain it, and take ownership without needing to be asked twice. Once trust is earned, my job shifts from directing to enabling, giving people space to make their own calls, and being there when they need support.</p>
+    </div>
+  </div>
+
+  <div class="grid status">
+    <p>My work section will be available soon.</p>
+  </div>
+</main>
 
 </body>
 </html>
