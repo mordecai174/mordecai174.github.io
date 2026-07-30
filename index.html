@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matt Rossi Designs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@500;700&family=Inter:wght@500;700&display=swap');
+
+  :root {
+    --bg: #0a0a0a;
+    --fg: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    background: var(--bg);
+    overflow: hidden;
+    font-family: 'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .stage {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    color: var(--fg);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    line-height: 1.05;
+    text-align: center;
+    letter-spacing: -0.01em;
+    max-width: 90vw;
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <h1>Matt Rossi Designs</h1>
+</div>
+
+</body>
+</html>
