@@ -48,6 +48,10 @@
   h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
   p { text-wrap: pretty; }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     width: 100%;
     background: var(--bg);
@@ -269,6 +273,27 @@
     margin-top: var(--gap-md);
   }
 
+  .footer {
+    margin-top: calc(var(--gap-lg) * 4);
+    padding-top: var(--gap-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+  }
+
+  .footer a {
+    color: var(--muted);
+    text-decoration: underline;
+  }
+
+  .footer a:hover {
+    color: var(--fg);
+  }
+
   @media (max-width: 720px) {
     .hero__id, .hero__links {
       font-size: var(--fs-sm);
@@ -294,7 +319,7 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <div class="bg-name" aria-hidden="true">
   <img src="assets/bg-name.svg" alt="">
@@ -385,7 +410,15 @@
       <p>🤝 Jeff, Paul, Matt F., and Seth.</p>
     </div>
   </div>
+
+  <footer class="footer">
+    <p>All Rights Reserved &copy; <span id="year"></span></p>
+    <a href="#top">Back to top &uarr;</a>
+  </footer>
 </main>
 
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
