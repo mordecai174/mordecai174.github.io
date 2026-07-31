@@ -296,6 +296,14 @@
     object-fit: cover;
   }
 
+  /* variant: 3 across, each spanning 2 of 6 columns. Same 640px height
+     as the 3-span square variant at our standard 1440px container, so
+     the aspect ratio (416:640 = 13:20) is fixed rather than 1:1 */
+  .work-grid--triple .work-grid__item {
+    grid-column: span 2;
+    aspect-ratio: 13 / 20;
+  }
+
   .footer {
     margin-top: calc(var(--gap-lg) * 4);
     padding-top: var(--gap-md);
@@ -335,7 +343,8 @@
     .work__content {
       grid-column: 1 / 7;
     }
-    .work-grid__item {
+    .work-grid__item,
+    .work-grid--triple .work-grid__item {
       grid-column: 1 / 7;
     }
   }
@@ -426,6 +435,11 @@
       <p>DeepSee's AI platform automates trade reporting and document processing for banks and capital markets firms, but bringing on a new client took far too long, with DeepSee's own team doing most of the manual setup behind the scenes. A short engagement to find where onboarding broke down led to recommendations on terminology, information architecture, and navigation, then grew into a second engagement helping clients actually configure their agentic workflows: scanning a sample document to get suggested terms instead of defining everything from scratch, starting from templates instead of a blank slate, and a visual canvas for editing workflows directly, paired with an AI chat to refine them in plain language.</p>
       <p>From there, the scope grew again into a set of role-based dashboards, each built around the same idea: show people what's happening, what needs their attention, and keep a human in the loop as more of the work becomes automated. The result is a product that feels less like software clients have to learn and more like a partner that gets out of their way.</p>
       <p>🤝 Chapman, Linzi, Ko</p>
+    </div>
+    <div class="work-grid work-grid--triple">
+      <div class="work-grid__item"><img src="assets/work/deepsee-grid-01.jpg" alt="DeepSee workspace overview dashboard"></div>
+      <div class="work-grid__item"><img src="assets/work/deepsee-grid-02.jpg" alt="DeepSee process calendar"></div>
+      <div class="work-grid__item"><img src="assets/work/deepsee-grid-03.jpg" alt="DeepSee performance status charts"></div>
     </div>
   </div>
 
