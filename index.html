@@ -273,6 +273,29 @@
     margin-top: var(--gap-md);
   }
 
+  /* additional project imagery below the case study text; 2x2, each
+     image spanning 3 of the 6 columns, square, 32px gap both ways */
+  .work-grid {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gutter);
+    margin-top: var(--gap-lg);
+  }
+
+  .work-grid__item {
+    grid-column: span 3;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .work-grid__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .footer {
     margin-top: calc(var(--gap-lg) * 4);
     padding-top: var(--gap-md);
@@ -310,6 +333,9 @@
       row-gap: var(--gap-md);
     }
     .work__content {
+      grid-column: 1 / 7;
+    }
+    .work-grid__item {
       grid-column: 1 / 7;
     }
   }
@@ -384,6 +410,12 @@
       <p>Few organizations do more essential work than United Way, and 211 is where that work meets people directly, connecting them to food, housing, childcare, and mental health support in the moments they need it most. The tools behind it hadn't kept up, so we rebuilt it as a self-service search experience: plain language like "I need a place to stay tonight" mapped to the right services, filters and screener surveys to narrow things down fast, and an interactive map so people could see what was nearby and act immediately, all backed by ongoing UI, UX, research, and frontend work across the full platform over more than a decade. Through all of it, UWCT has been the kind of partner every team hopes for: trusting, collaborative, and always honest about what was and wasn't working.</p>
       <p>211 CT is now considered the gold standard among United Way sites nationally, and the platform has since been licensed to Colorado and Arkansas.</p>
       <p>🤝 Every Mojo who worked with UWCT over the years.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-grid__item"><img src="assets/work/uwct-grid-01.jpg" alt="211 CT upcoming community events"></div>
+      <div class="work-grid__item"><img src="assets/work/uwct-grid-02.jpg" alt="211 CT homepage search"></div>
+      <div class="work-grid__item"><img src="assets/work/uwct-grid-03.jpg" alt="211 CT mobile search and results"></div>
+      <div class="work-grid__item"><img src="assets/work/uwct-grid-04.jpg" alt="211 CT resource map and filters"></div>
     </div>
   </div>
 
