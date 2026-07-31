@@ -219,7 +219,17 @@
     font-size: var(--fs-lg);
     line-height: var(--lh-lg);
     font-weight: 500;
-    margin-bottom: var(--gap-md);
+  }
+
+  /* each case study; a normal gap after the section label, but double
+     the usual section spacing between one item and the next so it's
+     unambiguous where one project ends and the next begins */
+  .work-item {
+    margin-top: var(--gap-md);
+  }
+
+  .work-item + .work-item {
+    margin-top: calc(var(--gap-lg) * 2);
   }
 
   .work__media {
@@ -326,6 +336,9 @@
 
   <div class="grid work">
     <div class="work__label">Featured Work</div>
+  </div>
+
+  <div class="grid work-item">
     <div class="work__media"></div>
     <div class="work__content">
       <h3>Blue Cross &amp; Blue Shield of Rhode Island</h3>
@@ -333,6 +346,16 @@
       <p>That first engagement earned enough trust to keep going: cross-channel upgrades to plan selection, a redesign of the member portal's layout, navigation, and information architecture for plan and benefit info, and eventually a full redesign of the public-facing website, grounded in customer call logs, call center agent interviews, and time spent in their Blue Stores, all in service of one omni-channel experience.</p>
       <p>The results: individual plan conversions more than doubled, up 161%, Medicare enrollments grew 40%, member event RSVPs jumped 390%, and cross-sell rose 30%.</p>
       <p>🤝 Jesse, Furhana, Andrew, and Ivan.</p>
+    </div>
+  </div>
+
+  <div class="grid work-item">
+    <div class="work__media"></div>
+    <div class="work__content">
+      <h3>United Way of Connecticut</h3>
+      <p>Few organizations do more essential work than United Way, and 211 is where that work meets people directly, connecting them to food, housing, childcare, and mental health support in the moments they need it most. The tools behind it hadn't kept up, so we rebuilt it as a self-service search experience: plain language like "I need a place to stay tonight" mapped to the right services, filters and screener surveys to narrow things down fast, and an interactive map so people could see what was nearby and act immediately, all backed by ongoing UI, UX, research, and frontend work across the full platform over more than a decade. Through all of it, UWCT has been the kind of partner every team hopes for: trusting, collaborative, and always honest about what was and wasn't working.</p>
+      <p>211 CT is now considered the gold standard among United Way sites nationally, and the platform has since been licensed to Colorado and Arkansas.</p>
+      <p>🤝 Every Mojo who worked with UWCT over the years.</p>
     </div>
   </div>
 </main>
