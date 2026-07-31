@@ -304,6 +304,15 @@
     aspect-ratio: 13 / 20;
   }
 
+  /* variant: two square items (span 3) side by side, then one item
+     spanning all 6 columns. Height-locked to the same 640px as the
+     square items above, so at 1312px content width the aspect ratio
+     is fixed at 1312:640 = 41:20 rather than derived from span count */
+  .work-grid__item--full {
+    grid-column: 1 / 7;
+    aspect-ratio: 41 / 20;
+  }
+
   .footer {
     margin-top: calc(var(--gap-lg) * 4);
     padding-top: var(--gap-md);
@@ -409,6 +418,11 @@
       <p>That first engagement earned enough trust to keep going: cross-channel upgrades to plan selection, a redesign of the member portal's layout, navigation, and information architecture for plan and benefit info, and eventually a full redesign of the public-facing website, grounded in customer call logs, call center agent interviews, and time spent in their Blue Stores, all in service of one omni-channel experience.</p>
       <p>The results: individual plan conversions more than doubled, up 161%, Medicare enrollments grew 40%, member event RSVPs jumped 390%, and cross-sell rose 30%.</p>
       <p>🤝 Jesse, Furhana, Andrew, and Ivan.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-grid__item"><img src="assets/work/bcbsri-grid-01.jpg" alt="BCBSRI Rhode Ahead wellness content hub"></div>
+      <div class="work-grid__item"><img src="assets/work/bcbsri-grid-02.jpg" alt="BCBSRI member testimonial quotes"></div>
+      <div class="work-grid__item work-grid__item--full"><img src="assets/work/bcbsri-grid-03.jpg" alt="BCBSRI plan categories for individuals, Medicare, and employers"></div>
     </div>
   </div>
 
