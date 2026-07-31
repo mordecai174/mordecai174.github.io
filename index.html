@@ -128,11 +128,11 @@
   }
 
   .hero__id a:hover {
-    color: var(--accent, #769AFF);
+    color: #769AFF;
   }
 
   .hero__id .name {
-    color: var(--accent, #769AFF);
+    color: #769AFF;
     font-weight: 500;
   }
 
@@ -144,7 +144,7 @@
   }
 
   .hero__links a:hover {
-    color: var(--accent, #769AFF);
+    color: #769AFF;
   }
 
   .intro {
@@ -380,34 +380,5 @@
   </div>
 </main>
 
-<script>
-  // Random accent color for the name, re-rolled on every load.
-  // Pool is Tailwind's 400-weight shades across the full hue spectrum,
-  // chosen because every one of them clears WCAG AA (4.5:1) contrast
-  // against the #0F0F0F background.
-  (function () {
-    var colors = [
-      '#F87171', // red-400
-      '#FB923C', // orange-400
-      '#FBBF24', // amber-400
-      '#FACC15', // yellow-400
-      '#A3E635', // lime-400
-      '#4ADE80', // green-400
-      '#34D399', // emerald-400
-      '#2DD4BF', // teal-400
-      '#22D3EE', // cyan-400
-      '#38BDF8', // sky-400
-      '#60A5FA', // blue-400
-      '#818CF8', // indigo-400
-      '#A78BFA', // violet-400
-      '#C084FC', // purple-400
-      '#E879F9', // fuchsia-400
-      '#F472B6', // pink-400
-      '#FB7185'  // rose-400
-    ];
-    var color = colors[Math.floor(Math.random() * colors.length)];
-    document.documentElement.style.setProperty('--accent', color);
-  })();
-</script>
 </body>
 </html>
