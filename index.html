@@ -116,7 +116,13 @@
   }
 
   .hero__id { grid-column: 1 / 4; }
-  .hero__links { grid-column: 4 / 7; text-align: left; }
+  .hero__links {
+    grid-column: 4 / 7;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .hero__id, .hero__links {
     font-size: var(--fs-lg);
@@ -141,7 +147,6 @@
   }
 
   .hero__links a {
-    display: block;
     color: var(--fg);
     text-decoration: underline;
     font-weight: 400;
