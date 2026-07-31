@@ -194,6 +194,21 @@
     max-width: 48ch;
   }
 
+  .logos {
+    margin-top: var(--gap-lg);
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: var(--gap-lg);
+    align-items: center;
+  }
+
+  .logos img {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    opacity: 0.4;
+  }
+
   .status {
     margin-top: var(--gap-lg);
   }
@@ -221,6 +236,10 @@
     }
     .split__col + .split__col {
       margin-top: var(--gap-md);
+    }
+    .logos {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: var(--gap-md);
     }
   }
 </style>
@@ -259,6 +278,17 @@
       <h2>As a leader&hellip;</h2>
       <p>Trust comes first. I'd rather build a team around people I trust than manage around people I don't. I look for a "doer" mentality: people who'd rather show you something than explain it, and take ownership without needing to be asked twice. Once trust is earned, my job shifts from directing to enabling, giving people space to make their own calls, and being there when they need support.</p>
     </div>
+  </div>
+
+  <div class="grid logos">
+    <img src="assets/logos/bcbs-center.svg" alt="BlueCross BlueShield">
+    <img src="assets/logos/dow-center.svg" alt="Dow Jones">
+    <img src="assets/logos/se-center.svg" alt="Schneider Electric">
+    <img src="assets/logos/ua-center.svg" alt="Under Armour">
+    <img src="assets/logos/shell-center.svg" alt="Shell">
+    <img src="assets/logos/ml-center.svg" alt="MoneyLion">
+    <img src="assets/logos/aetna-center.svg" alt="Aetna">
+    <img src="assets/logos/systra-center.svg" alt="Systra">
   </div>
 
   <div class="grid status">
