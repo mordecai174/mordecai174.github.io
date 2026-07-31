@@ -83,7 +83,10 @@
       transform: translate(-50%, -50%) rotate(90deg);
     }
     .bg-name img {
-      width: 100vh;
+      /* svh (small viewport height) reflects the viewport with mobile
+         browser chrome fully expanded, so this never overflows past
+         the actually-visible screen when the address bar is showing */
+      width: 100svh;
     }
   }
 
