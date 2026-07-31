@@ -235,8 +235,15 @@
   .work__media {
     grid-column: 1 / 7;
     aspect-ratio: 16 / 9;
-    background: var(--accent, #769AFF);
     margin-bottom: var(--gap-lg);
+    overflow: hidden;
+  }
+
+  .work__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .work__content {
@@ -339,7 +346,7 @@
   </div>
 
   <div class="grid work-item">
-    <div class="work__media"></div>
+    <div class="work__media"><img src="assets/work/bcbsri-hero.jpg" alt="Blue Cross & Blue Shield of Rhode Island website"></div>
     <div class="work__content">
       <h3>Blue Cross &amp; Blue Shield of Rhode Island</h3>
       <p>A single request to fix a leaking plan selection funnel turned into years of work with BCBSRI. We rebuilt it as a conversational experience that showed people their options in context and the full effect of each choice, down to clearer plan cards with pricing laid out simply enough to choose with confidence.</p>
@@ -350,7 +357,7 @@
   </div>
 
   <div class="grid work-item">
-    <div class="work__media"></div>
+    <div class="work__media"><img src="assets/work/uwct-hero.jpg" alt="United Way of Connecticut 211 platform"></div>
     <div class="work__content">
       <h3>United Way of Connecticut</h3>
       <p>Few organizations do more essential work than United Way, and 211 is where that work meets people directly, connecting them to food, housing, childcare, and mental health support in the moments they need it most. The tools behind it hadn't kept up, so we rebuilt it as a self-service search experience: plain language like "I need a place to stay tonight" mapped to the right services, filters and screener surveys to narrow things down fast, and an interactive map so people could see what was nearby and act immediately, all backed by ongoing UI, UX, research, and frontend work across the full platform over more than a decade. Through all of it, UWCT has been the kind of partner every team hopes for: trusting, collaborative, and always honest about what was and wasn't working.</p>
@@ -360,7 +367,7 @@
   </div>
 
   <div class="grid work-item">
-    <div class="work__media"></div>
+    <div class="work__media"><img src="assets/work/deepsee-hero.jpg" alt="DeepSee AI workflow platform"></div>
     <div class="work__content">
       <h3>DeepSee</h3>
       <p>DeepSee's AI platform automates trade reporting and document processing for banks and capital markets firms, but bringing on a new client took far too long, with DeepSee's own team doing most of the manual setup behind the scenes. A short engagement to find where onboarding broke down led to recommendations on terminology, information architecture, and navigation, then grew into a second engagement helping clients actually configure their agentic workflows: scanning a sample document to get suggested terms instead of defining everything from scratch, starting from templates instead of a blank slate, and a visual canvas for editing workflows directly, paired with an AI chat to refine them in plain language.</p>
@@ -370,7 +377,7 @@
   </div>
 
   <div class="grid work-item">
-    <div class="work__media"></div>
+    <div class="work__media"><img src="assets/work/ua-hero.jpg" alt="Under Armour B2B platform login"></div>
     <div class="work__content">
       <h3>Under Armour</h3>
       <p>Under Armour's B2B site hadn't kept pace with the brand: a legacy application serving dealers and teams making large, recurring purchases, with no way to serve customers outside North America. We rebuilt it from the ground up, starting with structured interviews across dealer and customer personas, from top retailers to some of the country's biggest athletic programs, paired with a survey reaching over 15,000 users, so every decision was grounded in how people actually bought, not assumptions about how they should. From there we mapped the information architecture and key workflows, then moved into wireframes and prototypes, testing layouts against long-word languages like Dutch and responsive views down to tablet. Each round went back in front of real users before anything moved forward.</p>
