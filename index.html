@@ -317,6 +317,36 @@
     margin-top: var(--gap-md);
   }
 
+  .work__tags {
+    grid-column: 2 / 6;
+    margin-top: var(--gap-lg);
+  }
+
+  .work__tags h2 {
+    color: var(--muted);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: 500;
+    margin-bottom: var(--gap-md);
+  }
+
+  .work__tags-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em var(--gutter);
+  }
+
+  .work__tags-grid ul {
+    list-style: none;
+  }
+
+  .work__tags-grid li {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    font-weight: 400;
+  }
+
   /* additional project imagery below the case study text; 2x2, each
      image spanning 3 of the 6 columns, square, 32px gap both ways */
   .work-grid {
@@ -405,6 +435,9 @@
     .work__content {
       grid-column: 1 / 7;
     }
+    .work__tags {
+      grid-column: 1 / 7;
+    }
     .work-grid__item,
     .work-grid--triple .work-grid__item {
       grid-column: 1 / 7;
@@ -479,6 +512,23 @@
       <p>The results: individual plan conversions more than doubled, up 161%, Medicare enrollments grew 40%, member event RSVPs jumped 390%, and cross-sell rose 30%.</p>
       <p>🤝 Jesse, Furhana, Andrew, and Ivan.</p>
     </div>
+    <div class="work__tags">
+      <h2>At-a-glance</h2>
+      <div class="work__tags-grid">
+        <ul>
+          <li>Product Design</li>
+          <li>User Research</li>
+          <li>Field Research</li>
+          <li>Design Strategy</li>
+        </ul>
+        <ul>
+          <li>Information Architecture</li>
+          <li>Experience Design</li>
+          <li>Visual Design</li>
+          <li>Accessibility / Inclusive Design</li>
+        </ul>
+      </div>
+    </div>
     <div class="work-grid">
       <div class="work-grid__item"><img src="assets/work/bcbsri-grid-01.jpg" alt="BCBSRI Rhode Ahead wellness content hub"></div>
       <div class="work-grid__item"><img src="assets/work/bcbsri-grid-02.jpg" alt="BCBSRI member testimonial quotes"></div>
@@ -496,6 +546,21 @@
       <p>Few organizations do more essential work than United Way, and 211 is where that work meets people directly, connecting them to food, housing, childcare, and mental health support in the moments they need it most. The tools behind it hadn't kept up, so we rebuilt it as a self-service search experience: plain language like "I need a place to stay tonight" mapped to the right services, filters and screener surveys to narrow things down fast, and an interactive map so people could see what was nearby and act immediately, all backed by ongoing UI, UX, research, and frontend work across the full platform over more than a decade. Through all of it, UWCT has been the kind of partner every team hopes for: trusting, collaborative, and always honest about what was and wasn't working.</p>
       <p>211 CT is now considered the gold standard among United Way sites nationally, and the platform has since been licensed to Colorado and Arkansas.</p>
       <p>🤝 Chris, and every Mojo who worked with UWCT over the years.</p>
+    </div>
+    <div class="work__tags">
+      <h2>At-a-glance</h2>
+      <div class="work__tags-grid">
+        <ul>
+          <li>Product Design</li>
+          <li>User Research</li>
+          <li>Information Architecture</li>
+        </ul>
+        <ul>
+          <li>Interaction Design</li>
+          <li>Experience Design</li>
+          <li>Front-end Development</li>
+        </ul>
+      </div>
     </div>
     <div class="work-grid">
       <div class="work-grid__item"><img src="assets/work/uwct-grid-01.jpg" alt="211 CT upcoming community events"></div>
@@ -516,6 +581,21 @@
       <p>From there, the scope grew again into a set of role-based dashboards, each built around the same idea: show people what's happening, what needs their attention, and keep a human in the loop as more of the work becomes automated. The result is a product that feels less like software clients have to learn and more like a partner that gets out of their way.</p>
       <p>🤝 Chapman, Linzi, Ko</p>
     </div>
+    <div class="work__tags">
+      <h2>At-a-glance</h2>
+      <div class="work__tags-grid">
+        <ul>
+          <li>Product Design</li>
+          <li>Design Strategy</li>
+          <li>Information Architecture</li>
+        </ul>
+        <ul>
+          <li>Interaction Design</li>
+          <li>Prototyping &amp; Concepts</li>
+          <li>Data Visualization</li>
+        </ul>
+      </div>
+    </div>
     <div class="work-grid work-grid--triple">
       <div class="work-grid__item"><img src="assets/work/deepsee-grid-01.jpg" alt="DeepSee workspace overview dashboard"></div>
       <div class="work-grid__item"><img src="assets/work/deepsee-grid-02.jpg" alt="DeepSee process calendar"></div>
@@ -533,6 +613,23 @@
       <p>Under Armour's B2B site hadn't kept pace with the brand: a legacy application serving dealers and teams making large, recurring purchases, with no way to serve customers outside North America. We rebuilt it from the ground up, starting with structured interviews across dealer and customer personas, from top retailers to some of the country's biggest athletic programs, paired with a survey reaching over 15,000 users, so every decision was grounded in how people actually bought, not assumptions about how they should. From there we mapped the information architecture and key workflows, then moved into wireframes and prototypes, testing layouts against long-word languages like Dutch and responsive views down to tablet. Each round went back in front of real users before anything moved forward.</p>
       <p>Jeff and I split the work across UX research and UI design, then stayed hands-on through frontend implementation alongside engineering to make sure what shipped matched what was designed. That continuity showed in the final product: a fully internationalized, responsive B2B platform, eight languages, eight currencies, WCAG 2.0 AA accessible, built around the features that actually drove the business, carts, team roster management, and an order grid built for bulk buying at a glance. What started as one redesign turned into years of continued work together.</p>
       <p>🤝 Jeff, Paul, Matt F., and Seth.</p>
+    </div>
+    <div class="work__tags">
+      <h2>At-a-glance</h2>
+      <div class="work__tags-grid">
+        <ul>
+          <li>Product Design</li>
+          <li>User Research</li>
+          <li>Usability Testing</li>
+          <li>Information Architecture</li>
+        </ul>
+        <ul>
+          <li>Prototyping &amp; Concepts</li>
+          <li>Visual Design</li>
+          <li>Accessibility / Inclusive Design</li>
+          <li>Front-end Development</li>
+        </ul>
+      </div>
     </div>
     <div class="work-grid">
       <div class="work-grid__item"><img src="assets/work/ua-grid-01.jpg" alt="Under Armour onboarding sport preferences step"></div>
