@@ -436,6 +436,14 @@
     font-weight: 400;
   }
 
+  /* tablet: step down from 3 per row to 2 per row before jumping all
+     the way to a single stacked column at the main 720px breakpoint */
+  @media (max-width: 1024px) and (min-width: 721px) {
+    .work-secondary__item {
+      grid-column: span 3;
+    }
+  }
+
   .footer {
     margin-top: calc(100svh + var(--gap-lg));
     padding-top: var(--gap-md);
