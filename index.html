@@ -390,6 +390,56 @@
     aspect-ratio: 41 / 20;
   }
 
+  .work-secondary {
+    margin-top: calc(var(--gap-lg) * 4);
+  }
+
+  .work-secondary__label {
+    grid-column: 1 / 7;
+    color: var(--fg);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: 500;
+  }
+
+  .work-secondary-grid {
+    margin-top: var(--gap-md);
+    row-gap: var(--gap-lg);
+  }
+
+  .work-secondary__item {
+    grid-column: span 2;
+  }
+
+  .work-secondary__image {
+    aspect-ratio: 1 / 1;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: calc(var(--gap-md) / 2);
+  }
+
+  .work-secondary__image span {
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    line-height: var(--lh-sm);
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+
+  .work-secondary__item p {
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    line-height: var(--lh-sm);
+    font-weight: 400;
+  }
+
+  .work-secondary__item .title {
+    color: var(--fg);
+  }
+
   .footer {
     margin-top: calc(100svh + var(--gap-lg));
     padding-top: var(--gap-md);
@@ -444,6 +494,9 @@
     .work-grid__item,
     .work-grid--triple .work-grid__item {
       grid-column: 1 / 7;
+    }
+    .work-secondary__item {
+      grid-column: 1 / -1;
     }
   }
 </style>
@@ -640,6 +693,37 @@
       <div class="work-grid__item work-grid__item--full"><img src="assets/work/ua-grid-03.jpg" alt="Under Armour product page with size fit guide modal"></div>
       <div class="work-grid__item"><img src="assets/work/ua-grid-04.jpg" alt="Under Armour hoodies and sweatshirts category page"></div>
       <div class="work-grid__item"><img src="assets/work/ua-grid-05.jpg" alt="Under Armour bulk order size run grid"></div>
+    </div>
+  </div>
+
+  <div class="grid work-secondary">
+    <div class="work-secondary__label">Additional Projects</div>
+  </div>
+
+  <div class="grid work-secondary-grid">
+    <div class="work-secondary__item">
+      <div class="work-secondary__image"><span>healthcasts</span></div>
+      <p><span class="title">Healthcasts</span> — AI-summarized cases help HCPs quickly grasp peer takeaways in their specialty, extending feedback networks to smaller practices.</p>
+    </div>
+    <div class="work-secondary__item">
+      <div class="work-secondary__image"><span>daydream</span></div>
+      <p><span class="title">Daydream</span> — An Airbnb-style platform for luxury properties, forecasting demand and profit while guiding owners from onboarding to first booking.</p>
+    </div>
+    <div class="work-secondary__item">
+      <div class="work-secondary__image"><span>schneider electric</span></div>
+      <p><span class="title">Schneider Electric</span> — Multiple engagements building IoT-connected configurators, helping buyers compare pricing, availability, and 3D models for BIM.</p>
+    </div>
+    <div class="work-secondary__item">
+      <div class="work-secondary__image"><span>amica</span></div>
+      <p><span class="title">Amica</span> — A redesigned user portal streamlining claims, new policies, and benefits into one clear, modern experience.</p>
+    </div>
+    <div class="work-secondary__item">
+      <div class="work-secondary__image"><span>bowlab</span></div>
+      <p><span class="title">BowLab</span> — Bluetooth-enabled arrow nocks synced to a companion app, helping archers track performance and tune shots by game size.</p>
+    </div>
+    <div class="work-secondary__item">
+      <div class="work-secondary__image"><span>televet</span></div>
+      <p><span class="title">TeleVet</span> — A telehealth app connecting pet owners to vets remotely, with video visits, appointments, prescriptions, and shared pet profiles.</p>
     </div>
   </div>
 
